@@ -1,0 +1,68 @@
+@mixin dur($t){
+   -webkit-transition-duration: $t + ms;
+    -o-transition-duration: $t + ms;
+    -moz-transition-duration: $t + ms;
+    transition-duration: $t + ms;
+}
+
+@mixin flexing(){
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: inline-flex;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: flex;
+}
+
+@mixin bg($src, $rp:no-repeat, $pos:0 0, $sz:auto){
+	 @if $src {
+		background-image: url($src);
+		background-repeat: $rp;
+		background-position: $pos;
+		background-size: $sz;
+	} @else {
+		background: transparent;
+	}
+}
+
+@mixin transY($y){
+	-webkit-transform: translateY($y + px);
+	-moz-transform: translateY($y + px);
+	-o-transform: translateY($y + px);
+	-ms-transform: translateY($y + px);
+	transform: translateY($y + px);
+}
+
+@mixin transX($x){
+	-webkit-transform: translateX($x + px);
+	-moz-transform: translateX($x + px);
+	-o-transform: translateX($x + px);
+	-ms-transform: translateX($x + px);
+	transform: translateX($x + px);
+}
+
+@mixin transXY($x, $y){
+	-webkit-transform: translate($x + px, $y + px);
+	-moz-transform: translate($x + px, $y + px);
+	-o-transform: translate($x + px, $y + px);
+	-ms-transform: translate($x + px, $y + px);
+	transform: translate($x + px, $y + px);
+}
+
+@mixin skx($deg){
+	-webkit-transform: skewX($deg + deg);
+	-moz-transform: skewX($deg + deg);
+	-o-transform: skewX($deg + deg);
+	-ms-transform: skewX($deg + deg);
+	transform: skewX($deg + deg);
+}
+
+@mixin sklXY($x, $y){
+	-webkit-transform: scale($x, $y);
+	-moz-transform: scale($x, $y);
+	-o-transform: scale($x, $y);
+	-ms-transform: scale($x, $y);
+	transform: scale($x, $y);
+}
